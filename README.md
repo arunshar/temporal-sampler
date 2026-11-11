@@ -4,7 +4,7 @@ This repository contains an illustrated guide to Durable Execution around a phys
 
 The website explains the model request, the Temporal components and the failure experiments. It includes a scenario explorer, an actual-run sampler timeline, a conceptual replay illustration, a searchable glossary, six technical chapters and downloadable slides.
 
-The public guide is at [the companion website](https://arunshar.github.io/temporal-sampler/).
+The public guide is at [the companion website](https://arunshar.com/temporal-sampler/).
 
 ## The evidence has a specific scope.
 
