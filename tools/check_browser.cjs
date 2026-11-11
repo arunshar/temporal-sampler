@@ -228,6 +228,8 @@ async function inspectViewport(targetURL, siteRoot, viewport) {
         }
         const summary = (await page.locator("#scenario-summary").textContent()).trim();
         assert(summary.length > 0, "The scenario summary is empty.");
+        if (option.value === "f2") assert(summary.includes("pending Activity status"), "The outage must explain the experiment observations.");
+        if (option.value === "f4") assert(summary.includes("average of the generated fields") && summary.includes("stopped retries"), "The physics failure needs its scope and retry outcome.");
         const runSelector = page.locator("#run-select");
         const runs = await runSelector.locator("option").evaluateAll(elements => elements
           .filter(element => !element.disabled && element.value !== "")
@@ -239,6 +241,8 @@ async function inspectViewport(targetURL, siteRoot, viewport) {
           await runSelector.selectOption(run.value);
           assert.equal(await runSelector.inputValue(), run.value);
           const timeline = await timelineState(page);
+          const description = await page.locator("#timeline").getAttribute("aria-label");
+          assert(description.includes("runner began the request") && description.includes("Workflow-start event"), "The timeline must distinguish its time origins.");
           const workerKilled = ["f1-hb", "f1-nohb", "f6"].includes(option.value);
           assert.equal(timeline.text.includes("Worker killed"), workerKilled, `Worker marker is incorrect for ${run.value}.`);
           assert.equal(await page.locator("#kill-legend").isVisible(), workerKilled, `Worker legend is incorrect for ${run.value}.`);
@@ -288,6 +292,8 @@ async function inspectViewport(targetURL, siteRoot, viewport) {
         states.push({ ...variant, output });
       }
       assert(new Set(states.map(state => state.output)).size > 1, "All replay variants returned the same explanation.");
+      const same = states.find(state => state.value === "same");
+      assert(same && same.output.includes("History supplies the recorded Infer result"), "Replay must distinguish the recorded result from Workflow decisions.");
       return states;
     });
 

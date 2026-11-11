@@ -27,11 +27,11 @@
     $('#site-nav').classList.remove('open');
   }));
   const descriptions = {
-    gateway: ['The gateway starts the job.', 'The Go gateway accepts request parameters and starts a Workflow. Only one measured request used this route. The failure campaign started Workflows through the Temporal CLI.'],
-    service: ['The Temporal Service keeps the record.', 'It stores Event History and schedules tasks on a Task Queue. Workers poll that queue. The local campaign used the Temporal dev server and a local database file.'],
+    gateway: ['The gateway starts the job.', 'The Go gateway receives a request and starts a Workflow. One measured request used this route. The failure campaign started Workflows with the Temporal command-line tool.'],
+    service: ['The Temporal Service keeps the record.', 'It stores Event History and places tasks on a Task Queue, a named waiting place for work. Workers repeatedly ask the queue for tasks. The local campaign used a Temporal dev server and a local database file.'],
     workflow: ['The Workflow chooses the order.', 'It schedules Infer, waits for its result, then schedules Report. The Worker executes this code. The Temporal Service records the decisions and outcomes.'],
-    activities: ['The Activities cross the process boundary.', 'Infer makes a gRPC request and checks the returned ensemble-mean metrics. Report makes an HTTP request to the optional agent and falls back to a template when that request fails.'],
-    rust: ['Rust owns the actual sampler.', 'ONNX Runtime evaluates the velocity network, and Rust runs the integration loop. Its blocking sampler task continues after the calling Worker disconnects in this implementation.'],
+    activities: ['The Activities cross the process boundary.', 'Infer asks the model service for a result and checks measurements on the average of the generated fields. Report asks an optional agent for text and uses a fixed template if that request fails.'],
+    rust: ['Rust owns the actual sampler.', 'ONNX Runtime evaluates the model, and Rust runs the repeated sampling steps. In this implementation, that sampler task continues after the calling Worker disconnects.'],
     report: ['The agent writes an explanation.', 'The agent receives accepted metrics and can return text. It does not decide whether the field passed the physics gate. Report returns a fixed template when the agent call fails.']
   };
   all('#architecture button[data-node]').forEach(button => button.addEventListener('click', () => {
@@ -72,18 +72,23 @@
       const k = x(r.kill_offset_s);
       svg += `<line x1="${k}" x2="${k}" y1="36" y2="${height - 40}" stroke="#fecb2f" stroke-width="2" stroke-dasharray="5 4"/><text x="${Math.min(width - 85, k + 5)}" y="38" fill="${root.dataset.theme === 'light' ? '#815400' : '#ffd277'}" font-size="11" font-family="Inter">Worker killed</text>`;
     }
-    svg += `<line x1="${left}" y1="${height - 30}" x2="${width - right}" y2="${height - 30}" stroke="${ink}" opacity=".4"/><text x="${left}" y="${height - 9}" fill="${ink}" font-size="11" font-family="Inter">Seconds since the request started</text></svg>`;
+    svg += `<line x1="${left}" y1="${height - 30}" x2="${width - right}" y2="${height - 30}" stroke="${ink}" opacity=".4"/><text x="${left}" y="${height - 9}" fill="${ink}" font-size="11" font-family="Inter">Seconds since the runner began the request</text></svg>`;
     $('#timeline').innerHTML = svg;
     const intervals = samples.length ? samples.map((sample, index) => `Sampler run ${index + 1} started at ${sec(sample.start_s)} seconds and ended at ${sec(sample.end_s)} seconds`).join('. ') : 'The sampler did not run';
     const killDescription = workerKilled ? `. The Worker kill command was at ${sec(r.kill_offset_s)} seconds` : '';
-    $('#timeline').setAttribute('aria-label', `Run ${r.id}. Workflow time ${sec(r.total_seconds)} seconds. ${intervals}${killDescription}. Times are relative to the request start.`);
+    $('#timeline').setAttribute('aria-label', `Run ${r.id}. Workflow time ${sec(r.total_seconds)} seconds. ${intervals}${killDescription}. Sampler and kill offsets are relative to when the runner began the request. Workflow duration uses the Workflow-start event as its starting point.`);
   }
   function renderScenario() {
     const g = data.groups.find(x => x.key === scenario.value);
     const rr = data.runs.filter(x => x.scenario === g.key);
     const interval = g.interval == null ? 'Not applicable' : g.interval === 'UNVERIFIED' ? 'UNVERIFIED' : `${g.interval} s`;
+    const notes = {
+      f2: 'The inference service returned during the retry window. The first retry start is UNVERIFIED because the experiment checked Temporal for pending Activity status at intervals and the fast failed attempts ended between those checks.',
+      f4: 'The request disabled projection, a step that adjusts the output, and used 20 steps. The physics gate checked the average of the generated fields and failed. The resulting Non-Retryable Error stopped retries. This shorter request is not a baseline timing comparison.',
+      f6: 'The test forcibly stopped the Worker and started a newer one. The scheduled Activity retained its old options without a Heartbeat Timeout. This covers one code transition.'
+    };
     const ending = g.outcome === 'COMPLETED' ? 'The Workflow completed.' : 'The Workflow failed.';
-    $('#scenario-summary').innerHTML = `<p class="badge">${ending}</p><div class="metric-row"><div><span class="metric-value">${g.total} s</span><span class="metric-label">The median Workflow duration</span></div><div><span class="metric-value">${g.attempts}</span><span class="metric-label">Infer attempts in each run</span></div><div><span class="metric-value">${g.samples}</span><span class="metric-label">Sampler runs in each run</span></div><div><span class="metric-value" style="${interval.length > 13 ? 'font-size:1.05rem' : ''}">${interval}</span><span class="metric-label">The median failure-to-next-attempt interval</span></div></div><p class="scenario-note">${escape(g.note.replace('with SIGKILL', 'with SIGKILL, which forcibly stops the process'))}</p><p class="source">The observed Workflow range was ${g.range} seconds. The configured Heartbeat Timeout was ${g.heartbeat}. Start-To-Close was 2 minutes. ${g.interval && g.interval !== 'UNVERIFIED' ? 'The measured interval is consistent with the chosen timeout setting and includes backoff, Worker availability and dispatch delay.' : ''}</p>`;
+    $('#scenario-summary').innerHTML = `<p class="badge">${ending}</p><div class="metric-row"><div><span class="metric-value">${g.total} s</span><span class="metric-label">The median Workflow duration</span></div><div><span class="metric-value">${g.attempts}</span><span class="metric-label">Infer attempts in each run</span></div><div><span class="metric-value">${g.samples}</span><span class="metric-label">Sampler runs in each run</span></div><div><span class="metric-value" style="${interval.length > 13 ? 'font-size:1.05rem' : ''}">${interval}</span><span class="metric-label">The median failure-to-next-attempt interval</span></div></div><p class="scenario-note">${escape(notes[g.key] || g.note.replace('with SIGKILL', 'with SIGKILL, which forcibly stops the process'))}</p><p class="source">The observed Workflow range was ${g.range} seconds. The configured Heartbeat Timeout was ${g.heartbeat}. Start-To-Close was 2 minutes. ${g.interval && g.interval !== 'UNVERIFIED' ? 'The measured interval is consistent with the chosen timeout setting and includes backoff, Worker availability and dispatch delay.' : ''}</p>`;
     runSelect.innerHTML = rr.map(r => `<option value="${r.id}">${r.id}</option>`).join('');
     const median = rr.slice().sort((a,b) => a.total_seconds - b.total_seconds)[Math.floor(rr.length / 2)];
     runSelect.value = median.id;
@@ -97,7 +102,7 @@
   renderScenario();
   function replay() {
     const mismatch = $('#replay-variant').value === 'timer';
-    $('#replay-output').innerHTML = `<div class="replay-grid"><div><h3>The saved history expects this path.</h3><ol class="event-list"><li>Infer is scheduled.</li><li>Infer completes and its result is recorded.</li><li>Report is scheduled.</li></ol></div><div><h3>The code proposes this path.</h3><ol class="event-list">${mismatch ? '<li class="mismatch">A timer is scheduled before Infer.</li><li>Infer would come later.</li>' : '<li>Infer is scheduled.</li><li>The recorded result supplies its outcome.</li><li>Report is scheduled.</li>'}</ol></div></div><p class="replay-verdict ${mismatch ? 'fail' : ''}">${mismatch ? 'The first decision differs. This illustration shows why the inserted timer conflicts with the saved path.' : 'The illustrated decisions match. The completed inference result comes from the history during replay.'}</p><p class="source">This browser illustration explains the recorded test. It is not a Temporal Replayer and does not execute Workflow code.</p>`;
+    $('#replay-output').innerHTML = `<div class="replay-grid"><div><h3>The saved history expects this path.</h3><ol class="event-list"><li>Infer is scheduled.</li><li>Infer completes and its result is recorded.</li><li>Report is scheduled.</li></ol></div><div><h3>The Workflow follows this path during replay.</h3><ol class="event-list">${mismatch ? '<li class="mismatch">A timer is scheduled before Infer.</li><li>Infer would come later.</li>' : '<li>The Workflow decides to schedule Infer.</li><li>History supplies the recorded Infer result.</li><li>The Workflow decides to schedule Report.</li>'}</ol></div></div><p class="replay-verdict ${mismatch ? 'fail' : ''}">${mismatch ? 'The first decision differs. This illustration shows why the inserted timer conflicts with the saved path.' : 'The illustrated decisions match. The completed inference result comes from the history during replay.'}</p><p class="source">This browser illustration explains the recorded test. It is not a Temporal Replayer and does not execute Workflow code.</p>`;
   }
   $('#replay-variant').addEventListener('change', replay);
   replay();
