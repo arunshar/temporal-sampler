@@ -120,7 +120,7 @@
         {
           "heading": "The comparison changes the timeout setting",
           "paragraphs": [
-            "Both Worker-killed groups recorded Heartbeats. Their difference was whether Infer had a Heartbeat Timeout of 10 seconds. Both retained the chosen Start-To-Close Timeout of 2 minutes. The test script killed the Worker with SIGKILL during Infer and started a replacement. The comparison tests that timeout setting under this failure procedure.",
+            "Both Worker-killed groups recorded Heartbeats. Their difference was whether Infer had a Heartbeat Timeout of 10 seconds. Both retained the chosen Start-To-Close Timeout of 2 minutes. The test script killed the Worker with SIGKILL, which forcibly stops the process, during Infer and started a replacement. The comparison tests that timeout setting under this failure procedure.",
             "Each group had five runs on one Apple M4 Pro laptop CPU with the demo-scale model. The median failure-to-next-attempt interval was 9.953 seconds with the Heartbeat Timeout and 117.873 seconds without it. These values are consistent with the chosen settings. The interval includes retry backoff, Worker availability and dispatch delay. It does not isolate the Temporal Service's internal timeout detector."
           ]
         },

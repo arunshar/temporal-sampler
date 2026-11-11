@@ -74,14 +74,16 @@
     }
     svg += `<line x1="${left}" y1="${height - 30}" x2="${width - right}" y2="${height - 30}" stroke="${ink}" opacity=".4"/><text x="${left}" y="${height - 9}" fill="${ink}" font-size="11" font-family="Inter">Seconds since the request started</text></svg>`;
     $('#timeline').innerHTML = svg;
-    $('#timeline').setAttribute('aria-label', `Recorded sampler intervals for ${r.id}`);
+    const intervals = samples.length ? samples.map((sample, index) => `Sampler run ${index + 1} started at ${sec(sample.start_s)} seconds and ended at ${sec(sample.end_s)} seconds`).join('. ') : 'The sampler did not run';
+    const killDescription = workerKilled ? `. The Worker kill command was at ${sec(r.kill_offset_s)} seconds` : '';
+    $('#timeline').setAttribute('aria-label', `Run ${r.id}. Workflow time ${sec(r.total_seconds)} seconds. ${intervals}${killDescription}. Times are relative to the request start.`);
   }
   function renderScenario() {
     const g = data.groups.find(x => x.key === scenario.value);
     const rr = data.runs.filter(x => x.scenario === g.key);
     const interval = g.interval == null ? 'Not applicable' : g.interval === 'UNVERIFIED' ? 'UNVERIFIED' : `${g.interval} s`;
     const ending = g.outcome === 'COMPLETED' ? 'The Workflow completed.' : 'The Workflow failed.';
-    $('#scenario-summary').innerHTML = `<p class="badge">${ending}</p><div class="metric-row"><div><span class="metric-value">${g.total} s</span><span class="metric-label">The median Workflow duration</span></div><div><span class="metric-value">${g.attempts}</span><span class="metric-label">Infer attempts in each run</span></div><div><span class="metric-value">${g.samples}</span><span class="metric-label">Sampler runs in each run</span></div><div><span class="metric-value" style="${interval.length > 13 ? 'font-size:1.05rem' : ''}">${interval}</span><span class="metric-label">The median failure-to-next-attempt interval</span></div></div><p class="scenario-note">${escape(g.note)}</p><p class="source">The observed Workflow range was ${g.range} seconds. The configured Heartbeat Timeout was ${g.heartbeat}. Start-To-Close was 2 minutes. ${g.interval && g.interval !== 'UNVERIFIED' ? 'The measured interval is consistent with the chosen timeout setting and includes backoff, Worker availability and dispatch delay.' : ''}</p>`;
+    $('#scenario-summary').innerHTML = `<p class="badge">${ending}</p><div class="metric-row"><div><span class="metric-value">${g.total} s</span><span class="metric-label">The median Workflow duration</span></div><div><span class="metric-value">${g.attempts}</span><span class="metric-label">Infer attempts in each run</span></div><div><span class="metric-value">${g.samples}</span><span class="metric-label">Sampler runs in each run</span></div><div><span class="metric-value" style="${interval.length > 13 ? 'font-size:1.05rem' : ''}">${interval}</span><span class="metric-label">The median failure-to-next-attempt interval</span></div></div><p class="scenario-note">${escape(g.note.replace('with SIGKILL', 'with SIGKILL, which forcibly stops the process'))}</p><p class="source">The observed Workflow range was ${g.range} seconds. The configured Heartbeat Timeout was ${g.heartbeat}. Start-To-Close was 2 minutes. ${g.interval && g.interval !== 'UNVERIFIED' ? 'The measured interval is consistent with the chosen timeout setting and includes backoff, Worker availability and dispatch delay.' : ''}</p>`;
     runSelect.innerHTML = rr.map(r => `<option value="${r.id}">${r.id}</option>`).join('');
     const median = rr.slice().sort((a,b) => a.total_seconds - b.total_seconds)[Math.floor(rr.length / 2)];
     runSelect.value = median.id;
