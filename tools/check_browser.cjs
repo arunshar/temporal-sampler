@@ -216,7 +216,37 @@ async function inspectViewport(targetURL, siteRoot, viewport) {
       assert(steps[3].includes("records") && steps[5].includes("recorded Infer result"), "The example needs a recorded result followed by replay.");
       assert((await section.textContent()).includes("conceptual"), "The example must identify itself as conceptual.");
       assert(await page.locator('a[href="#worked-example"]').count(), "The example needs an entry link.");
+      const cards = section.locator("#example-steps > li");
+      const previous = section.locator("#example-previous");
+      const next = section.locator("#example-next");
+      assert.equal(await cards.filter({ visible: true }).count(), 1, "Only one stage should be visible.");
+      assert.equal(await previous.getAttribute("aria-disabled"), "true");
+      for (let index = 0; index < steps.length; index++) {
+        assert(await cards.nth(index).isVisible(), `Stage ${index + 1} should be visible.`);
+        assert(await cards.nth(index).locator(".example-record").isVisible(), "The stage needs an illustrated record.");
+        assert((await section.locator("#example-progress").textContent()).includes(`Step ${index + 1} of ${steps.length}`));
+        if (index < steps.length - 1) await next.click();
+      }
+      assert.equal(await next.getAttribute("aria-disabled"), "true");
+      await next.dispatchEvent("click");
+      assert(await cards.last().isVisible(), "Next must not advance past the last stage.");
+      await previous.focus();
+      await page.keyboard.press("Enter");
+      assert(await cards.nth(steps.length - 2).isVisible(), "The previous control must work from the keyboard.");
       return { steps: steps.length };
+
+    });
+
+    await check(name, "The example remains readable without JavaScript.", async () => {
+      const plainContext = await browser.newContext({ viewport: { width: viewport.width, height: viewport.height }, javaScriptEnabled: false, serviceWorkers: "block" });
+      try {
+        const plain = await plainContext.newPage();
+        await plain.goto(targetURL, { waitUntil: "load", timeout: 30000 });
+        assert.equal(await plain.locator("#example-steps > li:visible").count(), 6, "All stages must be visible without JavaScript.");
+        assert.equal(await plain.locator("#example-steps .example-record:visible").count(), 6, "All illustrated records must be visible without JavaScript.");
+        assert.equal(await plain.locator("#example-controls").isVisible(), false, "Controls need JavaScript and must stay hidden without it.");
+        return { stages: 6 };
+      } finally { await plainContext.close(); }
     });
 
     await check(name, "Every scenario exposes recorded runs and a valid timeline.", async () => {

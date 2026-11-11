@@ -26,6 +26,22 @@
     $('#menu-toggle').setAttribute('aria-expanded', 'false');
     $('#site-nav').classList.remove('open');
   }));
+  const exampleSteps = all('#example-steps > li');
+  const exampleControls = $('#example-controls');
+  const previousStep = $('#example-previous');
+  const nextStep = $('#example-next');
+  let exampleIndex = 0;
+  function showExampleStep() {
+    exampleSteps.forEach((step, index) => { step.hidden = index !== exampleIndex; });
+    const title = exampleSteps[exampleIndex].querySelector('h3').textContent;
+    $('#example-progress').textContent = `Step ${exampleIndex + 1} of ${exampleSteps.length}: ${title}`;
+    previousStep.setAttribute('aria-disabled', String(exampleIndex === 0));
+    nextStep.setAttribute('aria-disabled', String(exampleIndex === exampleSteps.length - 1));
+  }
+  previousStep.addEventListener('click', () => { if (exampleIndex > 0) { exampleIndex--; showExampleStep(); } });
+  nextStep.addEventListener('click', () => { if (exampleIndex < exampleSteps.length - 1) { exampleIndex++; showExampleStep(); } });
+  showExampleStep();
+  exampleControls.hidden = false;
   const descriptions = {
     gateway: ['The gateway starts the job.', 'The Go gateway receives a request and starts a Workflow. One measured request used this route. The failure campaign started Workflows with the Temporal command-line tool.'],
     service: ['The Temporal Service keeps the record.', 'It stores Event History and places tasks on a Task Queue, a named waiting place for work. Workers repeatedly ask the queue for tasks. The local campaign used a Temporal dev server and a local database file.'],
