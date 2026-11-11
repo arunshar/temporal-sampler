@@ -208,6 +208,17 @@ async function inspectViewport(targetURL, siteRoot, viewport) {
       record.screenshots.push(screenshot);
     }
 
+    await check(name, "The worked example presents failure, retry and replay in order.", async () => {
+      const section = page.locator("#worked-example");
+      assert.equal(await section.locator("ol > li").count(), 6, "The example needs its complete sequence.");
+      const steps = await section.locator("ol > li").allTextContents();
+      assert(steps[1].includes("retryable connection error") && steps[2].includes("another"), "The example needs a retryable failure followed by a retry.");
+      assert(steps[3].includes("records") && steps[5].includes("recorded Infer result"), "The example needs a recorded result followed by replay.");
+      assert((await section.textContent()).includes("conceptual"), "The example must identify itself as conceptual.");
+      assert(await page.locator('a[href="#worked-example"]').count(), "The example needs an entry link.");
+      return { steps: steps.length };
+    });
+
     await check(name, "Every scenario exposes recorded runs and a valid timeline.", async () => {
       const selector = page.locator("#scenario-select");
       const options = await selector.locator("option").evaluateAll(elements => elements
