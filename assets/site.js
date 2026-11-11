@@ -28,19 +28,31 @@
   }));
   const exampleSteps = all('#example-steps > li');
   const exampleControls = $('#example-controls');
+  const exampleProgress = $('#example-progress');
   const previousStep = $('#example-previous');
   const nextStep = $('#example-next');
   let exampleIndex = 0;
   function showExampleStep() {
     exampleSteps.forEach((step, index) => { step.hidden = index !== exampleIndex; });
     const title = exampleSteps[exampleIndex].querySelector('h3').textContent;
-    $('#example-progress').textContent = `Step ${exampleIndex + 1} of ${exampleSteps.length}: ${title}`;
+    exampleProgress.textContent = `Step ${exampleIndex + 1} of ${exampleSteps.length}: ${title}`;
     previousStep.setAttribute('aria-disabled', String(exampleIndex === 0));
     nextStep.setAttribute('aria-disabled', String(exampleIndex === exampleSteps.length - 1));
   }
-  previousStep.addEventListener('click', () => { if (exampleIndex > 0) { exampleIndex--; showExampleStep(); } });
-  nextStep.addEventListener('click', () => { if (exampleIndex < exampleSteps.length - 1) { exampleIndex++; showExampleStep(); } });
+  function moveExampleStep(delta) {
+    const destination = exampleIndex + delta;
+    if (destination < 0 || destination >= exampleSteps.length) return;
+    exampleIndex = destination;
+    showExampleStep();
+    const heading = exampleSteps[exampleIndex].querySelector('h3');
+    heading.setAttribute('tabindex', '-1');
+    heading.focus({ preventScroll: true });
+    exampleSteps[exampleIndex].scrollIntoView({ block: 'start', behavior: 'auto' });
+  }
+  previousStep.addEventListener('click', () => moveExampleStep(-1));
+  nextStep.addEventListener('click', () => moveExampleStep(1));
   showExampleStep();
+  exampleProgress.hidden = false;
   exampleControls.hidden = false;
   const descriptions = {
     gateway: ['The gateway starts the job.', 'The Go gateway receives a request and starts a Workflow. One measured request used this route. The failure campaign started Workflows with the Temporal command-line tool.'],

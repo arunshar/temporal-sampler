@@ -214,6 +214,9 @@ async function inspectViewport(targetURL, siteRoot, viewport) {
       const steps = await section.locator("ol > li").allTextContents();
       assert(steps[1].includes("retryable connection error") && steps[2].includes("another"), "The example needs a retryable failure followed by a retry.");
       assert(steps[3].includes("records") && steps[5].includes("recorded Infer result"), "The example needs a recorded result followed by replay.");
+      assert(steps[1].includes("scheduling event stays in Event History") && steps[1].includes("tracks the failed attempt"), "The retry must distinguish the history event from attempt tracking.");
+      assert(steps[2].includes("earlier Infer scheduling event") && steps[3].includes("successful outcome"), "The retry and completion records must be clear.");
+      assert(steps[5].includes("recorded Infer result from existing Event History") && steps[5].includes("new decision"), "Replay must distinguish the saved result from the new Report decision.");
       assert((await section.textContent()).includes("conceptual"), "The example must identify itself as conceptual.");
       assert(await page.locator('a[href="#worked-example"]').count(), "The example needs an entry link.");
       const cards = section.locator("#example-steps > li");
@@ -221,11 +224,19 @@ async function inspectViewport(targetURL, siteRoot, viewport) {
       const next = section.locator("#example-next");
       assert.equal(await cards.filter({ visible: true }).count(), 1, "Only one stage should be visible.");
       assert.equal(await previous.getAttribute("aria-disabled"), "true");
+      assert(await section.locator("#example-controls").evaluate((control) => Boolean(document.querySelector("#example-steps").compareDocumentPosition(control) & Node.DOCUMENT_POSITION_FOLLOWING)), "Controls must follow the stage content.");
       for (let index = 0; index < steps.length; index++) {
         assert(await cards.nth(index).isVisible(), `Stage ${index + 1} should be visible.`);
         assert(await cards.nth(index).locator(".example-record").isVisible(), "The stage needs an illustrated record.");
         assert((await section.locator("#example-progress").textContent()).includes(`Step ${index + 1} of ${steps.length}`));
-        if (index < steps.length - 1) await next.click();
+        if (index < steps.length - 1) {
+          await next.scrollIntoViewIfNeeded();
+          const bounds = await page.evaluate(() => ({ cardBottom: document.querySelector("#example-steps > li:not([hidden])").getBoundingClientRect().bottom, nextTop: document.querySelector("#example-next").getBoundingClientRect().top, nextBottom: document.querySelector("#example-next").getBoundingClientRect().bottom, headerBottom: document.querySelector(".site-header").getBoundingClientRect().bottom, height: innerHeight }));
+          assert(bounds.cardBottom > bounds.headerBottom && bounds.cardBottom <= bounds.nextTop && bounds.nextBottom <= bounds.height + 1, "The card end and Next control must be visible together.");
+          await next.click();
+          const focus = await page.evaluate(() => ({ focused: document.activeElement.matches("#example-steps > li:not([hidden]) h3"), top: document.activeElement.getBoundingClientRect().top, headerBottom: document.querySelector(".site-header").getBoundingClientRect().bottom, height: innerHeight }));
+          assert(focus.focused && focus.top >= focus.headerBottom - 1 && focus.top < focus.height, "The new heading must receive focus and remain visible below the header.");
+        }
       }
       assert.equal(await next.getAttribute("aria-disabled"), "true");
       await next.dispatchEvent("click");
@@ -233,6 +244,7 @@ async function inspectViewport(targetURL, siteRoot, viewport) {
       await previous.focus();
       await page.keyboard.press("Enter");
       assert(await cards.nth(steps.length - 2).isVisible(), "The previous control must work from the keyboard.");
+      assert(await cards.nth(steps.length - 2).locator("h3").evaluate(el => document.activeElement === el), "The previous stage heading must receive focus.");
       return { steps: steps.length };
 
     });
@@ -245,6 +257,7 @@ async function inspectViewport(targetURL, siteRoot, viewport) {
         assert.equal(await plain.locator("#example-steps > li:visible").count(), 6, "All stages must be visible without JavaScript.");
         assert.equal(await plain.locator("#example-steps .example-record:visible").count(), 6, "All illustrated records must be visible without JavaScript.");
         assert.equal(await plain.locator("#example-controls").isVisible(), false, "Controls need JavaScript and must stay hidden without it.");
+        assert.equal(await plain.locator("#example-progress").isVisible(), false, "Interactive progress must stay hidden without JavaScript.");
         return { stages: 6 };
       } finally { await plainContext.close(); }
     });
