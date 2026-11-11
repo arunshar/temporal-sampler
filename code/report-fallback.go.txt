@@ -1,0 +1,10 @@
+	if a.AgentURL != "" {
+		if txt, err := callAgentReport(ctx, a.AgentURL, r); err == nil {
+			return txt, nil
+		}
+	}
+	return fmt.Sprintf(
+		"Downscaled a %dx%d field on %s in %.0f ms. Physics validity: "+
+			"DE=%.4f, NVR=%.4f, MCE=%.4f.",
+		r.Height, r.Width, r.Backend, r.LatencyMs, r.DE, r.NVR, r.MCE), nil
+}

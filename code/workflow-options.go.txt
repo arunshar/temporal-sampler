@@ -1,0 +1,9 @@
+	options := workflow.ActivityOptions{
+		StartToCloseTimeout: 2 * time.Minute,
+		RetryPolicy:         &temporal.RetryPolicy{MaximumAttempts: 3},
+	}
+	reportCtx := workflow.WithActivityOptions(ctx, options)
+	if !job.DisableHeartbeat {
+		options.HeartbeatTimeout = 10 * time.Second
+	}
+	inferCtx := workflow.WithActivityOptions(ctx, options)

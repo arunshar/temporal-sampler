@@ -1,0 +1,14 @@
+	ticker := time.NewTicker(2 * time.Second)
+	defer ticker.Stop()
+	var resp *pb.DownscaleResponse
+waitForRPC:
+	for {
+		select {
+		case out := <-done:
+			resp, err = out.response, out.err
+			break waitForRPC
+		case <-ticker.C:
+			activity.RecordHeartbeat(ctx, p.Seed)
+		case <-ctx.Done():
+			cancel()
+			<-done

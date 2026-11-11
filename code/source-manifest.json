@@ -1,0 +1,42 @@
+[
+  {
+    "name": "workflow-options",
+    "path": "services/gateway-go/internal/workflows/downscale.go",
+    "commit": "9aa337d6efab128ec4f215c2ebaa6552d860e1ad",
+    "start_line": 28,
+    "end_line": 36,
+    "sha256": "afa23893e9b24cc819407fe3e671a2cf6ab3786d950a3735bd381f305f13acb8"
+  },
+  {
+    "name": "physics-check",
+    "path": "services/gateway-go/internal/activities/activities.go",
+    "commit": "9aa337d6efab128ec4f215c2ebaa6552d860e1ad",
+    "start_line": 107,
+    "end_line": 132,
+    "sha256": "9036aa7cf60983b10160a8446a2d69f0192183d6314d36b67584a69d802ed1d0"
+  },
+  {
+    "name": "heartbeat-loop",
+    "path": "services/gateway-go/internal/activities/activities.go",
+    "commit": "9aa337d6efab128ec4f215c2ebaa6552d860e1ad",
+    "start_line": 83,
+    "end_line": 96,
+    "sha256": "8e226eaaf80a7976cdb34891ac5f882da4f1b7efde229cf5ef4ee8d6cb147132"
+  },
+  {
+    "name": "replay-test",
+    "path": "services/gateway-go/internal/workflows/replay_test.go",
+    "commit": "9aa337d6efab128ec4f215c2ebaa6552d860e1ad",
+    "start_line": 10,
+    "end_line": 14,
+    "sha256": "4525cec7b60dc22c0dccff89820e68270f4f96369b0c25dc0cd9ddb4f0faae55"
+  },
+  {
+    "name": "report-fallback",
+    "path": "services/gateway-go/internal/activities/activities.go",
+    "commit": "9aa337d6efab128ec4f215c2ebaa6552d860e1ad",
+    "start_line": 148,
+    "end_line": 157,
+    "sha256": "8a21aafeab669e0809067884f1938eb69fcc46a8a8640d7c39ca3f5e9576bae4"
+  }
+]

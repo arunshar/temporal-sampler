@@ -1,0 +1,5 @@
+func TestReplayR2History(t *testing.T) {
+	replayer := worker.NewWorkflowReplayer()
+	replayer.RegisterWorkflow(DownscaleWorkflow)
+	require.NoError(t, replayer.ReplayWorkflowHistoryFromJSONFile(nil, "testdata/r2_happy_path.json"))
+}

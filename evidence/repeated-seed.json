@@ -1,0 +1,26 @@
+{
+  "seed": 7,
+  "parameters": {
+    "params": {
+      "fine": 64,
+      "base": 32,
+      "steps": 20,
+      "ensemble": 4,
+      "project": false,
+      "seed": 7,
+      "coarse_mass": 0.1
+    }
+  },
+  "metrics_a": {
+    "divergence_error": 0.21398616,
+    "nonneg_violation": 0.107666016,
+    "mass_cons_error": 4.189112
+  },
+  "metrics_b": {
+    "divergence_error": 0.21398616,
+    "nonneg_violation": 0.107666016,
+    "mass_cons_error": 4.189112
+  },
+  "metrics_identical": true,
+  "scope": "These are ensemble-mean metrics on this Mac CPU with the demo-scale model. Full field identity and other hardware remain UNVERIFIED."
+}

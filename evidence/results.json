@@ -1,0 +1,954 @@
+{
+  "scope": "One Apple M4 Pro laptop CPU, demo-scale model, five runs per scenario.",
+  "model": "64 by 64 tile, base width 32, two levels, no attention, briefly trained on synthetic data.",
+  "server": "Temporal dev server with a local database file.",
+  "pinned_commit": "9aa337d6efab128ec4f215c2ebaa6552d860e1ad",
+  "groups": [
+    {
+      "key": "baseline",
+      "label": "No failure",
+      "total": "16.159",
+      "range": "15.767 to 18.080",
+      "ledger_id": "baseline_total_median",
+      "outcome": "COMPLETED",
+      "attempts": 1,
+      "samples": 1,
+      "interval": null,
+      "heartbeat": "10 s",
+      "note": "The request finished without an injected failure. The Workflow includes inference and reporting.",
+      "run_ids": [
+        "baseline-1",
+        "baseline-2",
+        "baseline-3",
+        "baseline-4-resume-1",
+        "baseline-5"
+      ]
+    },
+    {
+      "key": "f1-hb",
+      "label": "Worker killed, 10 s Heartbeat Timeout",
+      "total": "32.320",
+      "range": "31.829 to 32.483",
+      "ledger_id": "f1_hb_total_median",
+      "outcome": "COMPLETED",
+      "attempts": 2,
+      "samples": 2,
+      "interval": "9.953",
+      "heartbeat": "10 s",
+      "note": "The Worker was killed with SIGKILL. The first attempt ended through a Heartbeat Timeout. The sampler still ran twice.",
+      "run_ids": [
+        "f1-hb-1",
+        "f1-hb-2",
+        "f1-hb-3",
+        "f1-hb-4",
+        "f1-hb-5"
+      ]
+    },
+    {
+      "key": "f1-nohb",
+      "label": "Worker killed, no Heartbeat Timeout",
+      "total": "137.130",
+      "range": "136.808 to 138.523",
+      "ledger_id": "f1_nohb_total_median",
+      "outcome": "COMPLETED",
+      "attempts": 2,
+      "samples": 2,
+      "interval": "117.873",
+      "heartbeat": "none",
+      "note": "The Worker was killed with SIGKILL. Both groups recorded Heartbeats, but this group had no Heartbeat Timeout. Start-To-Close ended the first attempt.",
+      "run_ids": [
+        "f1-nohb-1",
+        "f1-nohb-2",
+        "f1-nohb-3",
+        "f1-nohb-4",
+        "f1-nohb-5"
+      ]
+    },
+    {
+      "key": "f2",
+      "label": "Service down briefly",
+      "total": "19.466",
+      "range": "19.347 to 20.541",
+      "ledger_id": "f2_total_median",
+      "outcome": "COMPLETED",
+      "attempts": 3,
+      "samples": 1,
+      "interval": "UNVERIFIED",
+      "heartbeat": "10 s",
+      "note": "The inference service returned during the retry window. The first retry start is UNVERIFIED because fast failures fell between polls.",
+      "run_ids": [
+        "f2-1",
+        "f2-2",
+        "f2-3",
+        "f2-4",
+        "f2-5"
+      ]
+    },
+    {
+      "key": "f3",
+      "label": "Service down throughout",
+      "total": "3.026",
+      "range": "3.025 to 3.026",
+      "ledger_id": "f3_total_median",
+      "outcome": "FAILED",
+      "attempts": 3,
+      "samples": 0,
+      "interval": null,
+      "heartbeat": "10 s",
+      "note": "The inference service stayed unavailable. All allowed Infer attempts failed before the Rust sampler ran.",
+      "run_ids": [
+        "f3-1",
+        "f3-2",
+        "f3-3",
+        "f3-4",
+        "f3-5"
+      ]
+    },
+    {
+      "key": "f4",
+      "label": "Invalid physics output",
+      "total": "0.224",
+      "range": "0.222 to 0.232",
+      "ledger_id": "f4_total_median",
+      "outcome": "FAILED",
+      "attempts": 1,
+      "samples": 1,
+      "interval": null,
+      "heartbeat": "10 s",
+      "note": "The request disabled projection and used 20 steps. The ensemble mean failed the physics gate. This shorter request is not a baseline timing comparison.",
+      "run_ids": [
+        "f4-1",
+        "f4-2",
+        "f4-3",
+        "f4-4",
+        "f4-5"
+      ]
+    },
+    {
+      "key": "f5",
+      "label": "LLM agent unavailable",
+      "total": "16.271",
+      "range": "15.926 to 16.437",
+      "ledger_id": "f5_total_median",
+      "outcome": "COMPLETED",
+      "attempts": 1,
+      "samples": 1,
+      "interval": null,
+      "heartbeat": "10 s",
+      "note": "The LLM request failed, so Report returned its template. The separate report-unavailable Workflow branch ran only in a mocked test.",
+      "run_ids": [
+        "f5-1",
+        "f5-2",
+        "f5-3",
+        "f5-4",
+        "f5-5"
+      ]
+    },
+    {
+      "key": "f6",
+      "label": "Worker replaced mid-Activity",
+      "total": "136.430",
+      "range": "136.338 to 137.164",
+      "ledger_id": "f6_total_median",
+      "outcome": "COMPLETED",
+      "attempts": 2,
+      "samples": 2,
+      "interval": "117.873",
+      "heartbeat": "none",
+      "note": "A newer Worker took over after SIGKILL. The scheduled Activity retained its old options without a Heartbeat Timeout. This covers one code transition.",
+      "run_ids": [
+        "f6-1",
+        "f6-2",
+        "f6-3",
+        "f6-4",
+        "f6-5"
+      ]
+    }
+  ],
+  "parameters": {
+    "fine": 64,
+    "base": 32,
+    "steps": 1500,
+    "ensemble": 4,
+    "project": true,
+    "seed": 7,
+    "coarse_mass": 0.1
+  },
+  "runs": [
+    {
+      "id": "baseline-1",
+      "scenario": "baseline",
+      "state": "COMPLETED",
+      "total_seconds": 15.767093181610107,
+      "infer_attempts": 1,
+      "sample_count": 1,
+      "kill_offset_s": null,
+      "samples": [
+        {
+          "start_s": 0.038943,
+          "end_s": 15.779462,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "baseline-2",
+      "scenario": "baseline",
+      "state": "COMPLETED",
+      "total_seconds": 15.828296899795532,
+      "infer_attempts": 1,
+      "sample_count": 1,
+      "kill_offset_s": null,
+      "samples": [
+        {
+          "start_s": 0.036463,
+          "end_s": 15.839335,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "baseline-3",
+      "scenario": "baseline",
+      "state": "COMPLETED",
+      "total_seconds": 17.00426197052002,
+      "infer_attempts": 1,
+      "sample_count": 1,
+      "kill_offset_s": null,
+      "samples": [
+        {
+          "start_s": 0.037416,
+          "end_s": 17.016359,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "baseline-4-resume-1",
+      "scenario": "baseline",
+      "state": "COMPLETED",
+      "total_seconds": 16.158586978912354,
+      "infer_attempts": 1,
+      "sample_count": 1,
+      "kill_offset_s": null,
+      "samples": [
+        {
+          "start_s": 0.040031,
+          "end_s": 16.170025,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "baseline-5",
+      "scenario": "baseline",
+      "state": "COMPLETED",
+      "total_seconds": 18.079549074172974,
+      "infer_attempts": 1,
+      "sample_count": 1,
+      "kill_offset_s": null,
+      "samples": [
+        {
+          "start_s": 0.036976,
+          "end_s": 18.090856,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "f1-hb-1",
+      "scenario": "f1-hb",
+      "state": "COMPLETED",
+      "total_seconds": 32.42688202857971,
+      "infer_attempts": 2,
+      "sample_count": 2,
+      "kill_offset_s": 3.067329,
+      "samples": [
+        {
+          "start_s": 0.036728,
+          "end_s": 19.813449,
+          "seed": 7,
+          "success": true
+        },
+        {
+          "start_s": 13.043409,
+          "end_s": 32.436138,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": 9.973113059997559
+    },
+    {
+      "id": "f1-hb-2",
+      "scenario": "f1-hb",
+      "state": "COMPLETED",
+      "total_seconds": 32.20606017112732,
+      "infer_attempts": 2,
+      "sample_count": 2,
+      "kill_offset_s": 3.081179,
+      "samples": [
+        {
+          "start_s": 0.036875,
+          "end_s": 18.514026,
+          "seed": 7,
+          "success": true
+        },
+        {
+          "start_s": 13.045297,
+          "end_s": 32.213958,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": 9.961127281188965
+    },
+    {
+      "id": "f1-hb-3",
+      "scenario": "f1-hb",
+      "state": "COMPLETED",
+      "total_seconds": 32.482755184173584,
+      "infer_attempts": 2,
+      "sample_count": 2,
+      "kill_offset_s": 3.115899,
+      "samples": [
+        {
+          "start_s": 0.037071,
+          "end_s": 20.230509,
+          "seed": 7,
+          "success": true
+        },
+        {
+          "start_s": 13.045401,
+          "end_s": 32.495522,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": 9.925831079483032
+    },
+    {
+      "id": "f1-hb-4",
+      "scenario": "f1-hb",
+      "state": "COMPLETED",
+      "total_seconds": 32.319746017456055,
+      "infer_attempts": 2,
+      "sample_count": 2,
+      "kill_offset_s": 3.095464,
+      "samples": [
+        {
+          "start_s": 0.035778,
+          "end_s": 19.069616,
+          "seed": 7,
+          "success": true
+        },
+        {
+          "start_s": 13.053451,
+          "end_s": 32.327523,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": 9.953367233276367
+    },
+    {
+      "id": "f1-hb-5",
+      "scenario": "f1-hb",
+      "state": "COMPLETED",
+      "total_seconds": 31.828557014465332,
+      "infer_attempts": 2,
+      "sample_count": 2,
+      "kill_offset_s": 3.117353,
+      "samples": [
+        {
+          "start_s": 0.038353,
+          "end_s": 19.148306,
+          "seed": 7,
+          "success": true
+        },
+        {
+          "start_s": 13.046471,
+          "end_s": 31.838901,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": 9.92601990699768
+    },
+    {
+      "id": "f1-nohb-1",
+      "scenario": "f1-nohb",
+      "state": "COMPLETED",
+      "total_seconds": 138.3859100341797,
+      "infer_attempts": 2,
+      "sample_count": 2,
+      "kill_offset_s": 3.080078,
+      "samples": [
+        {
+          "start_s": 0.035873,
+          "end_s": 16.174418,
+          "seed": 7,
+          "success": true
+        },
+        {
+          "start_s": 121.042182,
+          "end_s": 138.396682,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": 117.95824384689331
+    },
+    {
+      "id": "f1-nohb-2",
+      "scenario": "f1-nohb",
+      "state": "COMPLETED",
+      "total_seconds": 137.09050011634827,
+      "infer_attempts": 2,
+      "sample_count": 2,
+      "kill_offset_s": 3.165081,
+      "samples": [
+        {
+          "start_s": 0.037285,
+          "end_s": 18.715926,
+          "seed": 7,
+          "success": true
+        },
+        {
+          "start_s": 121.042767,
+          "end_s": 137.099483,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": 117.87343573570251
+    },
+    {
+      "id": "f1-nohb-3",
+      "scenario": "f1-nohb",
+      "state": "COMPLETED",
+      "total_seconds": 138.52324414253235,
+      "infer_attempts": 2,
+      "sample_count": 2,
+      "kill_offset_s": 3.140526,
+      "samples": [
+        {
+          "start_s": 0.038822,
+          "end_s": 16.167168,
+          "seed": 7,
+          "success": true
+        },
+        {
+          "start_s": 121.043396,
+          "end_s": 138.533316,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": 117.89946722984314
+    },
+    {
+      "id": "f1-nohb-4",
+      "scenario": "f1-nohb",
+      "state": "COMPLETED",
+      "total_seconds": 136.80764603614807,
+      "infer_attempts": 2,
+      "sample_count": 2,
+      "kill_offset_s": 3.178391,
+      "samples": [
+        {
+          "start_s": 0.038459,
+          "end_s": 16.414558,
+          "seed": 7,
+          "success": true
+        },
+        {
+          "start_s": 121.042448,
+          "end_s": 136.821026,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": 117.86034989356995
+    },
+    {
+      "id": "f1-nohb-5",
+      "scenario": "f1-nohb",
+      "state": "COMPLETED",
+      "total_seconds": 137.13047099113464,
+      "infer_attempts": 2,
+      "sample_count": 2,
+      "kill_offset_s": 3.188845,
+      "samples": [
+        {
+          "start_s": 0.036899,
+          "end_s": 15.782852,
+          "seed": 7,
+          "success": true
+        },
+        {
+          "start_s": 121.042663,
+          "end_s": 137.140913,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": 117.85016512870789
+    },
+    {
+      "id": "f2-1",
+      "scenario": "f2",
+      "state": "COMPLETED",
+      "total_seconds": 20.541266918182373,
+      "infer_attempts": 3,
+      "sample_count": 1,
+      "kill_offset_s": -0.009684,
+      "samples": [
+        {
+          "start_s": 3.047164,
+          "end_s": 20.553616,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "f2-2",
+      "scenario": "f2",
+      "state": "COMPLETED",
+      "total_seconds": 19.523717164993286,
+      "infer_attempts": 3,
+      "sample_count": 1,
+      "kill_offset_s": -0.010042,
+      "samples": [
+        {
+          "start_s": 3.046054,
+          "end_s": 19.534321,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "f2-3",
+      "scenario": "f2",
+      "state": "COMPLETED",
+      "total_seconds": 19.46611189842224,
+      "infer_attempts": 3,
+      "sample_count": 1,
+      "kill_offset_s": -0.010512,
+      "samples": [
+        {
+          "start_s": 3.045632,
+          "end_s": 19.477764,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "f2-4",
+      "scenario": "f2",
+      "state": "COMPLETED",
+      "total_seconds": 19.405493021011353,
+      "infer_attempts": 3,
+      "sample_count": 1,
+      "kill_offset_s": -0.009605,
+      "samples": [
+        {
+          "start_s": 3.045396,
+          "end_s": 19.415875,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "f2-5",
+      "scenario": "f2",
+      "state": "COMPLETED",
+      "total_seconds": 19.347475051879883,
+      "infer_attempts": 3,
+      "sample_count": 1,
+      "kill_offset_s": -0.009782,
+      "samples": [
+        {
+          "start_s": 3.048583,
+          "end_s": 19.359276,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "f3-1",
+      "scenario": "f3",
+      "state": "FAILED",
+      "total_seconds": 3.0256330966949463,
+      "infer_attempts": 3,
+      "sample_count": 0,
+      "kill_offset_s": null,
+      "samples": [],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "f3-2",
+      "scenario": "f3",
+      "state": "FAILED",
+      "total_seconds": 3.025250196456909,
+      "infer_attempts": 3,
+      "sample_count": 0,
+      "kill_offset_s": null,
+      "samples": [],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "f3-3",
+      "scenario": "f3",
+      "state": "FAILED",
+      "total_seconds": 3.02579402923584,
+      "infer_attempts": 3,
+      "sample_count": 0,
+      "kill_offset_s": null,
+      "samples": [],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "f3-4",
+      "scenario": "f3",
+      "state": "FAILED",
+      "total_seconds": 3.025998115539551,
+      "infer_attempts": 3,
+      "sample_count": 0,
+      "kill_offset_s": null,
+      "samples": [],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "f3-5",
+      "scenario": "f3",
+      "state": "FAILED",
+      "total_seconds": 3.0250749588012695,
+      "infer_attempts": 3,
+      "sample_count": 0,
+      "kill_offset_s": null,
+      "samples": [],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "f4-1",
+      "scenario": "f4",
+      "state": "FAILED",
+      "total_seconds": 0.23174500465393066,
+      "infer_attempts": 1,
+      "sample_count": 1,
+      "kill_offset_s": null,
+      "samples": [
+        {
+          "start_s": 0.03677,
+          "end_s": 0.251241,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "f4-2",
+      "scenario": "f4",
+      "state": "FAILED",
+      "total_seconds": 0.2237260341644287,
+      "infer_attempts": 1,
+      "sample_count": 1,
+      "kill_offset_s": null,
+      "samples": [
+        {
+          "start_s": 0.036986,
+          "end_s": 0.243544,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "f4-3",
+      "scenario": "f4",
+      "state": "FAILED",
+      "total_seconds": 0.22232317924499512,
+      "infer_attempts": 1,
+      "sample_count": 1,
+      "kill_offset_s": null,
+      "samples": [
+        {
+          "start_s": 0.036653,
+          "end_s": 0.243304,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "f4-4",
+      "scenario": "f4",
+      "state": "FAILED",
+      "total_seconds": 0.2237548828125,
+      "infer_attempts": 1,
+      "sample_count": 1,
+      "kill_offset_s": null,
+      "samples": [
+        {
+          "start_s": 0.037259,
+          "end_s": 0.243566,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "f4-5",
+      "scenario": "f4",
+      "state": "FAILED",
+      "total_seconds": 0.22899794578552246,
+      "infer_attempts": 1,
+      "sample_count": 1,
+      "kill_offset_s": null,
+      "samples": [
+        {
+          "start_s": 0.036037,
+          "end_s": 0.248531,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "f5-1",
+      "scenario": "f5",
+      "state": "COMPLETED",
+      "total_seconds": 16.07321810722351,
+      "infer_attempts": 1,
+      "sample_count": 1,
+      "kill_offset_s": null,
+      "samples": [
+        {
+          "start_s": 0.036759,
+          "end_s": 16.082939,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "f5-2",
+      "scenario": "f5",
+      "state": "COMPLETED",
+      "total_seconds": 16.270534992218018,
+      "infer_attempts": 1,
+      "sample_count": 1,
+      "kill_offset_s": null,
+      "samples": [
+        {
+          "start_s": 0.037308,
+          "end_s": 16.281151,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "f5-3",
+      "scenario": "f5",
+      "state": "COMPLETED",
+      "total_seconds": 15.926172971725464,
+      "infer_attempts": 1,
+      "sample_count": 1,
+      "kill_offset_s": null,
+      "samples": [
+        {
+          "start_s": 0.036125,
+          "end_s": 15.939198,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "f5-4",
+      "scenario": "f5",
+      "state": "COMPLETED",
+      "total_seconds": 16.437445878982544,
+      "infer_attempts": 1,
+      "sample_count": 1,
+      "kill_offset_s": null,
+      "samples": [
+        {
+          "start_s": 0.038538,
+          "end_s": 16.44802,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "f5-5",
+      "scenario": "f5",
+      "state": "COMPLETED",
+      "total_seconds": 16.27310013771057,
+      "infer_attempts": 1,
+      "sample_count": 1,
+      "kill_offset_s": null,
+      "samples": [
+        {
+          "start_s": 0.039973,
+          "end_s": 16.284288,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": null
+    },
+    {
+      "id": "f6-1",
+      "scenario": "f6",
+      "state": "COMPLETED",
+      "total_seconds": 136.34649300575256,
+      "infer_attempts": 2,
+      "sample_count": 2,
+      "kill_offset_s": 3.184063,
+      "samples": [
+        {
+          "start_s": 0.039858,
+          "end_s": 15.709985,
+          "seed": 7,
+          "success": true
+        },
+        {
+          "start_s": 121.045025,
+          "end_s": 136.357898,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": 117.85722303390503
+    },
+    {
+      "id": "f6-2",
+      "scenario": "f6",
+      "state": "COMPLETED",
+      "total_seconds": 137.1644389629364,
+      "infer_attempts": 2,
+      "sample_count": 2,
+      "kill_offset_s": 3.060992,
+      "samples": [
+        {
+          "start_s": 0.035938,
+          "end_s": 15.394471,
+          "seed": 7,
+          "success": true
+        },
+        {
+          "start_s": 121.041605,
+          "end_s": 137.171191,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": 117.97631406784058
+    },
+    {
+      "id": "f6-3",
+      "scenario": "f6",
+      "state": "COMPLETED",
+      "total_seconds": 136.67917895317078,
+      "infer_attempts": 2,
+      "sample_count": 2,
+      "kill_offset_s": 3.185512,
+      "samples": [
+        {
+          "start_s": 0.040561,
+          "end_s": 17.221406,
+          "seed": 7,
+          "success": true
+        },
+        {
+          "start_s": 121.046239,
+          "end_s": 136.688545,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": 117.85694885253906
+    },
+    {
+      "id": "f6-4",
+      "scenario": "f6",
+      "state": "COMPLETED",
+      "total_seconds": 136.33832001686096,
+      "infer_attempts": 2,
+      "sample_count": 2,
+      "kill_offset_s": 3.165656,
+      "samples": [
+        {
+          "start_s": 0.037039,
+          "end_s": 15.443554,
+          "seed": 7,
+          "success": true
+        },
+        {
+          "start_s": 121.042181,
+          "end_s": 136.347169,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": 117.87330913543701
+    },
+    {
+      "id": "f6-5",
+      "scenario": "f6",
+      "state": "COMPLETED",
+      "total_seconds": 136.43012690544128,
+      "infer_attempts": 2,
+      "sample_count": 2,
+      "kill_offset_s": 3.142208,
+      "samples": [
+        {
+          "start_s": 0.038731,
+          "end_s": 15.374594,
+          "seed": 7,
+          "success": true
+        },
+        {
+          "start_s": 121.04563,
+          "end_s": 136.438244,
+          "seed": 7,
+          "success": true
+        }
+      ],
+      "failure_to_next_attempt_s": 117.89915704727173
+    }
+  ]
+}

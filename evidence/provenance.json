@@ -1,0 +1,17 @@
+{
+  "pinned_commit": "9aa337d6efab128ec4f215c2ebaa6552d860e1ad",
+  "source_kind": "Frozen sanitized research records.",
+  "included": "Run-level elapsed intervals, sample counts and selected history fields. Raw histories, hostnames, process logs and model files are excluded.",
+  "sources": {
+    "runs_table.json": "a94f421e9462f618ea88e5c53454d2f1de835a807137d66092ab283863631ac3",
+    "history_excerpts.json": "ede6017ac4f11ece8eba92b6e204ce8ec66befb41eb992e8982092bae43e95e1",
+    "r3_reproducibility.json": "b6ee7530630548ec8fa565a6642d6688371e5ba5b8c2dea846f8db196ca4692f",
+    "RESULTS.md": "c43dbd451231dfafb13d4a1a9d702997f22c009ad04679497658789e084fe731"
+  },
+  "unverified": [
+    "First retry start in the brief outage",
+    "Full field identity",
+    "Other-hardware reproducibility",
+    "Remote CI and container builds of the research runtime"
+  ]
+}

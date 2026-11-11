@@ -1,0 +1,26 @@
+	maxNVR, maxMCE := float32(0), float32(1e-3)
+	if p.MaxNVR != nil {
+		maxNVR = *p.MaxNVR
+	}
+	if p.MaxMCE != nil {
+		maxMCE = *p.MaxMCE
+	}
+	var failed []string
+	if m == nil {
+		failed = append(failed, "metrics_present")
+	}
+	if math.IsNaN(float64(nvr)) || math.IsInf(float64(nvr), 0) ||
+		math.IsNaN(float64(maxNVR)) || math.IsInf(float64(maxNVR), 0) ||
+		maxNVR < 0 || nvr < 0 || nvr > maxNVR {
+		failed = append(failed, "NVR <= max_nvr")
+	}
+	if math.IsNaN(float64(mce)) || math.IsInf(float64(mce), 0) ||
+		math.IsNaN(float64(maxMCE)) || math.IsInf(float64(maxMCE), 0) ||
+		maxMCE <= 0 || mce < 0 || mce >= maxMCE {
+		failed = append(failed, "MCE < max_mce")
+	}
+	if len(failed) > 0 {
+		msg := fmt.Sprintf("Physics check failed for %s. NVR=%g, MCE=%g, max_nvr=%g, max_mce=%g.",
+			strings.Join(failed, ", "), nvr, mce, maxNVR, maxMCE)
+		return nil, temporal.NewNonRetryableApplicationError(msg, "PhysicsCheckFailed", nil)
+	}

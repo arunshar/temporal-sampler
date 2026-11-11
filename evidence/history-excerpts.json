@@ -1,0 +1,5218 @@
+{
+  "baseline-1": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 3.9e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002305,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.006453,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.006488,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 0.008963,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 7,
+        "t_s": 15.756145,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 15.756151,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 15.758499,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 15.760885,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 15.760907,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 15.762513,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 15.763915,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 15.763919,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 15.76526,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 15.767075,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 15.767093,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "baseline-2": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 3.8e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002367,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005325,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.005349,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 0.007046,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 7,
+        "t_s": 15.815686,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 15.815692,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 15.817979,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 15.820663,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 15.820689,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 15.822668,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 15.824755,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 15.824759,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 15.826321,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 15.828279,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 15.828297,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "baseline-3": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 3.9e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002402,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005619,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.005646,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 0.007355,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 7,
+        "t_s": 16.992475,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 16.992481,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 16.994918,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 16.997091,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 16.997117,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 16.998794,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 17.000472,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 17.000476,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 17.002164,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 17.004243,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 17.004262,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "baseline-4-interrupted": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 3.6e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002382,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005498,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.005526,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 218.009018,
+        "type": "WORKFLOW_EXECUTION_TERMINATED"
+      }
+    ],
+    "last_failure": null
+  },
+  "baseline-4-resume-1": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 3.7e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002669,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.006789,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.006879,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 0.008935,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 7,
+        "t_s": 16.145088,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 16.145096,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 16.148314,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 16.151235,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 16.151266,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 16.153511,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 16.155239,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 16.155244,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 16.156746,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 16.158555,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 16.158587,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "baseline-5": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 3.9e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002337,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.00553,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.005557,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 0.006988,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 7,
+        "t_s": 18.065936,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 18.065942,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 18.068161,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 18.070985,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 18.07101,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 18.07301,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 18.075054,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 18.07506,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 18.077017,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 18.079368,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 18.079549,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f1-hb-1": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 5.3e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002381,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005707,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.005735,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 13.015215,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 2,
+        "lastFailure": {
+          "message": "activity Heartbeat timeout",
+          "source": "Server",
+          "timeoutType": "TIMEOUT_TYPE_HEARTBEAT"
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 32.412938,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 32.412944,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 32.416688,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 32.419305,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 32.419331,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 32.420973,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 32.422967,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 32.422971,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 32.424631,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 32.426858,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 32.426882,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f1-hb-2": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 4.1e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002548,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005592,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.005618,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 13.016038,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 2,
+        "lastFailure": {
+          "message": "activity Heartbeat timeout",
+          "source": "Server",
+          "timeoutType": "TIMEOUT_TYPE_HEARTBEAT"
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 32.189698,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 32.189703,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 32.19434,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 32.198406,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 32.198431,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 32.200131,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 32.202149,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 32.202153,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 32.203577,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 32.206041,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 32.20606,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f1-hb-3": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 4e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002076,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005698,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.005726,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 13.015924,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 2,
+        "lastFailure": {
+          "message": "activity Heartbeat timeout",
+          "source": "Server",
+          "timeoutType": "TIMEOUT_TYPE_HEARTBEAT"
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 32.471367,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 32.471376,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 32.474019,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 32.477,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 32.477023,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 32.478346,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 32.479743,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 32.479748,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 32.481148,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 32.482736,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 32.482755,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f1-hb-4": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 4e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002233,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005179,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.005205,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 13.023338,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 2,
+        "lastFailure": {
+          "message": "activity Heartbeat timeout",
+          "source": "Server",
+          "timeoutType": "TIMEOUT_TYPE_HEARTBEAT"
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 32.304051,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 32.304058,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 32.306899,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 32.310135,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 32.310159,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 32.312034,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 32.314911,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 32.314947,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 32.317361,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 32.319728,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 32.319746,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f1-hb-5": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 4.6e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002378,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.007137,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.007167,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 13.016994,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 2,
+        "lastFailure": {
+          "message": "activity Heartbeat timeout",
+          "source": "Server",
+          "timeoutType": "TIMEOUT_TYPE_HEARTBEAT"
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 31.813773,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 31.81378,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 31.817097,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 31.820582,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 31.820609,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 31.822663,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 31.824816,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 31.824821,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 31.826504,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 31.828539,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 31.828557,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f1-nohb-1": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 4.5e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002139,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005156,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.005183,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 121.01251,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 2,
+        "lastFailure": {
+          "message": "activity StartToClose timeout",
+          "source": "Server",
+          "timeoutType": "TIMEOUT_TYPE_START_TO_CLOSE"
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 138.372719,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 138.372724,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 138.376334,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 138.379381,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 138.379405,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 138.381049,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 138.382615,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 138.38262,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 138.384076,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 138.385891,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 138.38591,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f1-nohb-2": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 3.8e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002313,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.00572,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.005747,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 121.013068,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 2,
+        "lastFailure": {
+          "message": "activity StartToClose timeout",
+          "source": "Server",
+          "timeoutType": "TIMEOUT_TYPE_START_TO_CLOSE"
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 137.075535,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 137.075541,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 137.079289,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 137.082791,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 137.082827,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 137.084551,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 137.086667,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 137.086671,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 137.088155,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 137.090479,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 137.0905,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f1-nohb-3": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 4e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002597,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005916,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.00595,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 121.013275,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 2,
+        "lastFailure": {
+          "message": "activity StartToClose timeout",
+          "source": "Server",
+          "timeoutType": "TIMEOUT_TYPE_START_TO_CLOSE"
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 138.507906,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 138.507911,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 138.511535,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 138.515092,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 138.51512,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 138.516914,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 138.519319,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 138.519325,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 138.52133,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 138.523225,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 138.523244,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f1-nohb-4": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 4.5e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.00267,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.006229,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.006258,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 121.01245,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 2,
+        "lastFailure": {
+          "message": "activity StartToClose timeout",
+          "source": "Server",
+          "timeoutType": "TIMEOUT_TYPE_START_TO_CLOSE"
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 136.796051,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 136.796056,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 136.799317,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 136.801828,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 136.801854,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 136.803206,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 136.804582,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 136.804586,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 136.80581,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 136.807615,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 136.807646,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f1-nohb-5": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 4e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002649,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005667,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.005694,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 121.013323,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 2,
+        "lastFailure": {
+          "message": "activity StartToClose timeout",
+          "source": "Server",
+          "timeoutType": "TIMEOUT_TYPE_START_TO_CLOSE"
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 137.11667,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 137.116676,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 137.120084,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 137.123198,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 137.123227,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 137.124814,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 137.126726,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 137.12673,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 137.128068,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 137.130456,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 137.130471,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f2-1": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 4e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.00266,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005817,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.005844,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 3.018079,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 3,
+        "lastFailure": {
+          "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+          "source": "GoSDK",
+          "type": "wrapError",
+          "nonRetryable": false,
+          "cause": {
+            "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+            "source": "GoSDK",
+            "type": "Error",
+            "nonRetryable": false
+          }
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 20.530606,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 20.530611,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 20.533687,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 20.535551,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 20.535576,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 20.537043,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 20.538449,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 20.538453,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 20.539602,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 20.541251,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 20.541267,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f2-2": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 4.7e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002267,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005716,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.005742,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 3.018576,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 3,
+        "lastFailure": {
+          "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+          "source": "GoSDK",
+          "type": "wrapError",
+          "nonRetryable": false,
+          "cause": {
+            "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+            "source": "GoSDK",
+            "type": "Error",
+            "nonRetryable": false
+          }
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 19.511534,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 19.511541,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 19.513905,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 19.516346,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 19.516371,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 19.518423,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 19.520193,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 19.520197,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 19.521631,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 19.523696,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 19.523717,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f2-3": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 3.7e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002641,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.006047,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.006076,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 3.018584,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 3,
+        "lastFailure": {
+          "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+          "source": "GoSDK",
+          "type": "wrapError",
+          "nonRetryable": false,
+          "cause": {
+            "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+            "source": "GoSDK",
+            "type": "Error",
+            "nonRetryable": false
+          }
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 19.454813,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 19.454819,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 19.457062,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 19.458913,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 19.458936,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 19.46054,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 19.462288,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 19.462294,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 19.463883,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 19.466093,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 19.466112,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f2-4": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 3.6e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002311,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005367,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.005393,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 3.017599,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 3,
+        "lastFailure": {
+          "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+          "source": "GoSDK",
+          "type": "wrapError",
+          "nonRetryable": false,
+          "cause": {
+            "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+            "source": "GoSDK",
+            "type": "Error",
+            "nonRetryable": false
+          }
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 19.392875,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 19.392882,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 19.395825,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 19.398269,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 19.398292,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 19.400114,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 19.402077,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 19.40208,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 19.403458,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 19.405477,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 19.405493,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f2-5": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 3.7e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.0027,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.006257,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.006283,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 3.019379,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 3,
+        "lastFailure": {
+          "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+          "source": "GoSDK",
+          "type": "wrapError",
+          "nonRetryable": false,
+          "cause": {
+            "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+            "source": "GoSDK",
+            "type": "Error",
+            "nonRetryable": false
+          }
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 19.335153,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 19.335158,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 19.338496,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 19.340789,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 19.340813,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 19.342201,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 19.343616,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 19.343621,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 19.345086,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 19.347458,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 19.347475,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f3-1": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 4.6e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002384,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005832,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.005864,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 3.017519,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 3,
+        "lastFailure": {
+          "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+          "source": "GoSDK",
+          "type": "wrapError",
+          "nonRetryable": false,
+          "cause": {
+            "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+            "source": "GoSDK",
+            "type": "Error",
+            "nonRetryable": false
+          }
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 3.020902,
+        "type": "ACTIVITY_TASK_FAILED",
+        "failure": {
+          "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+          "source": "GoSDK",
+          "type": "wrapError",
+          "nonRetryable": false,
+          "cause": {
+            "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+            "source": "GoSDK",
+            "type": "Error",
+            "nonRetryable": false
+          }
+        },
+        "retryState": "RETRY_STATE_MAXIMUM_ATTEMPTS_REACHED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 3.020913,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 3.023015,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 3.0256,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 3.025633,
+        "type": "WORKFLOW_EXECUTION_FAILED",
+        "failure": {
+          "message": "activity error",
+          "source": "GoSDK",
+          "cause": {
+            "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+            "source": "GoSDK",
+            "type": "wrapError",
+            "nonRetryable": false,
+            "cause": {
+              "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+              "source": "GoSDK",
+              "type": "Error",
+              "nonRetryable": false
+            }
+          }
+        },
+        "retryState": "RETRY_STATE_RETRY_POLICY_NOT_SET"
+      }
+    ],
+    "last_failure": {
+      "message": "activity error",
+      "source": "GoSDK",
+      "cause": {
+        "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+        "source": "GoSDK",
+        "type": "wrapError",
+        "nonRetryable": false,
+        "cause": {
+          "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+          "source": "GoSDK",
+          "type": "Error",
+          "nonRetryable": false
+        }
+      }
+    }
+  },
+  "f3-2": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 3.9e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002641,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005556,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.005586,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 3.018547,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 3,
+        "lastFailure": {
+          "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+          "source": "GoSDK",
+          "type": "wrapError",
+          "nonRetryable": false,
+          "cause": {
+            "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+            "source": "GoSDK",
+            "type": "Error",
+            "nonRetryable": false
+          }
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 3.02125,
+        "type": "ACTIVITY_TASK_FAILED",
+        "failure": {
+          "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+          "source": "GoSDK",
+          "type": "wrapError",
+          "nonRetryable": false,
+          "cause": {
+            "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+            "source": "GoSDK",
+            "type": "Error",
+            "nonRetryable": false
+          }
+        },
+        "retryState": "RETRY_STATE_MAXIMUM_ATTEMPTS_REACHED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 3.021254,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 3.022978,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 3.025232,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 3.02525,
+        "type": "WORKFLOW_EXECUTION_FAILED",
+        "failure": {
+          "message": "activity error",
+          "source": "GoSDK",
+          "cause": {
+            "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+            "source": "GoSDK",
+            "type": "wrapError",
+            "nonRetryable": false,
+            "cause": {
+              "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+              "source": "GoSDK",
+              "type": "Error",
+              "nonRetryable": false
+            }
+          }
+        },
+        "retryState": "RETRY_STATE_RETRY_POLICY_NOT_SET"
+      }
+    ],
+    "last_failure": {
+      "message": "activity error",
+      "source": "GoSDK",
+      "cause": {
+        "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+        "source": "GoSDK",
+        "type": "wrapError",
+        "nonRetryable": false,
+        "cause": {
+          "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+          "source": "GoSDK",
+          "type": "Error",
+          "nonRetryable": false
+        }
+      }
+    }
+  },
+  "f3-3": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 4e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002539,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005534,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.00556,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 3.018347,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 3,
+        "lastFailure": {
+          "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+          "source": "GoSDK",
+          "type": "wrapError",
+          "nonRetryable": false,
+          "cause": {
+            "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+            "source": "GoSDK",
+            "type": "Error",
+            "nonRetryable": false
+          }
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 3.021896,
+        "type": "ACTIVITY_TASK_FAILED",
+        "failure": {
+          "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+          "source": "GoSDK",
+          "type": "wrapError",
+          "nonRetryable": false,
+          "cause": {
+            "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+            "source": "GoSDK",
+            "type": "Error",
+            "nonRetryable": false
+          }
+        },
+        "retryState": "RETRY_STATE_MAXIMUM_ATTEMPTS_REACHED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 3.021902,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 3.023739,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 3.025771,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 3.025794,
+        "type": "WORKFLOW_EXECUTION_FAILED",
+        "failure": {
+          "message": "activity error",
+          "source": "GoSDK",
+          "cause": {
+            "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+            "source": "GoSDK",
+            "type": "wrapError",
+            "nonRetryable": false,
+            "cause": {
+              "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+              "source": "GoSDK",
+              "type": "Error",
+              "nonRetryable": false
+            }
+          }
+        },
+        "retryState": "RETRY_STATE_RETRY_POLICY_NOT_SET"
+      }
+    ],
+    "last_failure": {
+      "message": "activity error",
+      "source": "GoSDK",
+      "cause": {
+        "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+        "source": "GoSDK",
+        "type": "wrapError",
+        "nonRetryable": false,
+        "cause": {
+          "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+          "source": "GoSDK",
+          "type": "Error",
+          "nonRetryable": false
+        }
+      }
+    }
+  },
+  "f3-4": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 8e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002521,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005664,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.005695,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 3.019233,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 3,
+        "lastFailure": {
+          "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+          "source": "GoSDK",
+          "type": "wrapError",
+          "nonRetryable": false,
+          "cause": {
+            "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+            "source": "GoSDK",
+            "type": "Error",
+            "nonRetryable": false
+          }
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 3.022203,
+        "type": "ACTIVITY_TASK_FAILED",
+        "failure": {
+          "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+          "source": "GoSDK",
+          "type": "wrapError",
+          "nonRetryable": false,
+          "cause": {
+            "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+            "source": "GoSDK",
+            "type": "Error",
+            "nonRetryable": false
+          }
+        },
+        "retryState": "RETRY_STATE_MAXIMUM_ATTEMPTS_REACHED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 3.022209,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 3.02399,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 3.02598,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 3.025998,
+        "type": "WORKFLOW_EXECUTION_FAILED",
+        "failure": {
+          "message": "activity error",
+          "source": "GoSDK",
+          "cause": {
+            "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+            "source": "GoSDK",
+            "type": "wrapError",
+            "nonRetryable": false,
+            "cause": {
+              "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+              "source": "GoSDK",
+              "type": "Error",
+              "nonRetryable": false
+            }
+          }
+        },
+        "retryState": "RETRY_STATE_RETRY_POLICY_NOT_SET"
+      }
+    ],
+    "last_failure": {
+      "message": "activity error",
+      "source": "GoSDK",
+      "cause": {
+        "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+        "source": "GoSDK",
+        "type": "wrapError",
+        "nonRetryable": false,
+        "cause": {
+          "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+          "source": "GoSDK",
+          "type": "Error",
+          "nonRetryable": false
+        }
+      }
+    }
+  },
+  "f3-5": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 3.7e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002213,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005638,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.005663,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 3.018094,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 3,
+        "lastFailure": {
+          "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+          "source": "GoSDK",
+          "type": "wrapError",
+          "nonRetryable": false,
+          "cause": {
+            "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+            "source": "GoSDK",
+            "type": "Error",
+            "nonRetryable": false
+          }
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 3.021267,
+        "type": "ACTIVITY_TASK_FAILED",
+        "failure": {
+          "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+          "source": "GoSDK",
+          "type": "wrapError",
+          "nonRetryable": false,
+          "cause": {
+            "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+            "source": "GoSDK",
+            "type": "Error",
+            "nonRetryable": false
+          }
+        },
+        "retryState": "RETRY_STATE_MAXIMUM_ATTEMPTS_REACHED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 3.021272,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 3.022857,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 3.025057,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 3.025075,
+        "type": "WORKFLOW_EXECUTION_FAILED",
+        "failure": {
+          "message": "activity error",
+          "source": "GoSDK",
+          "cause": {
+            "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+            "source": "GoSDK",
+            "type": "wrapError",
+            "nonRetryable": false,
+            "cause": {
+              "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+              "source": "GoSDK",
+              "type": "Error",
+              "nonRetryable": false
+            }
+          }
+        },
+        "retryState": "RETRY_STATE_RETRY_POLICY_NOT_SET"
+      }
+    ],
+    "last_failure": {
+      "message": "activity error",
+      "source": "GoSDK",
+      "cause": {
+        "message": "downscale rpc: rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+        "source": "GoSDK",
+        "type": "wrapError",
+        "nonRetryable": false,
+        "cause": {
+          "message": "rpc error: code = Unavailable desc = connection error: desc = \"transport: Error while dialing: dial tcp 127.0.0.1:50051: connect: connection refused\"",
+          "source": "GoSDK",
+          "type": "Error",
+          "nonRetryable": false
+        }
+      }
+    }
+  },
+  "f4-1": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 3.8e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002529,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005923,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.005949,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 0.007765,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 7,
+        "t_s": 0.227544,
+        "type": "ACTIVITY_TASK_FAILED",
+        "failure": {
+          "message": "Physics check failed for NVR <= max_nvr, MCE < max_mce. NVR=0.107666016, MCE=4.189112, max_nvr=0, max_mce=0.001.",
+          "source": "GoSDK",
+          "type": "PhysicsCheckFailed",
+          "nonRetryable": true
+        },
+        "retryState": "RETRY_STATE_NON_RETRYABLE_FAILURE"
+      },
+      {
+        "eventId": 8,
+        "t_s": 0.22755,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 0.229788,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 0.231726,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 0.231745,
+        "type": "WORKFLOW_EXECUTION_FAILED",
+        "failure": {
+          "message": "activity error",
+          "source": "GoSDK",
+          "cause": {
+            "message": "Physics check failed for NVR <= max_nvr, MCE < max_mce. NVR=0.107666016, MCE=4.189112, max_nvr=0, max_mce=0.001.",
+            "source": "GoSDK",
+            "type": "PhysicsCheckFailed",
+            "nonRetryable": true
+          }
+        },
+        "retryState": "RETRY_STATE_RETRY_POLICY_NOT_SET"
+      }
+    ],
+    "last_failure": {
+      "message": "activity error",
+      "source": "GoSDK",
+      "cause": {
+        "message": "Physics check failed for NVR <= max_nvr, MCE < max_mce. NVR=0.107666016, MCE=4.189112, max_nvr=0, max_mce=0.001.",
+        "source": "GoSDK",
+        "type": "PhysicsCheckFailed",
+        "nonRetryable": true
+      }
+    }
+  },
+  "f4-2": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 3.9e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002044,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005304,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.00533,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 0.006823,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 7,
+        "t_s": 0.219508,
+        "type": "ACTIVITY_TASK_FAILED",
+        "failure": {
+          "message": "Physics check failed for NVR <= max_nvr, MCE < max_mce. NVR=0.107666016, MCE=4.189112, max_nvr=0, max_mce=0.001.",
+          "source": "GoSDK",
+          "type": "PhysicsCheckFailed",
+          "nonRetryable": true
+        },
+        "retryState": "RETRY_STATE_NON_RETRYABLE_FAILURE"
+      },
+      {
+        "eventId": 8,
+        "t_s": 0.219513,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 0.221662,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 0.223708,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 0.223726,
+        "type": "WORKFLOW_EXECUTION_FAILED",
+        "failure": {
+          "message": "activity error",
+          "source": "GoSDK",
+          "cause": {
+            "message": "Physics check failed for NVR <= max_nvr, MCE < max_mce. NVR=0.107666016, MCE=4.189112, max_nvr=0, max_mce=0.001.",
+            "source": "GoSDK",
+            "type": "PhysicsCheckFailed",
+            "nonRetryable": true
+          }
+        },
+        "retryState": "RETRY_STATE_RETRY_POLICY_NOT_SET"
+      }
+    ],
+    "last_failure": {
+      "message": "activity error",
+      "source": "GoSDK",
+      "cause": {
+        "message": "Physics check failed for NVR <= max_nvr, MCE < max_mce. NVR=0.107666016, MCE=4.189112, max_nvr=0, max_mce=0.001.",
+        "source": "GoSDK",
+        "type": "PhysicsCheckFailed",
+        "nonRetryable": true
+      }
+    }
+  },
+  "f4-3": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 3.6e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002651,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005618,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.005642,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 0.007269,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 7,
+        "t_s": 0.218425,
+        "type": "ACTIVITY_TASK_FAILED",
+        "failure": {
+          "message": "Physics check failed for NVR <= max_nvr, MCE < max_mce. NVR=0.107666016, MCE=4.189112, max_nvr=0, max_mce=0.001.",
+          "source": "GoSDK",
+          "type": "PhysicsCheckFailed",
+          "nonRetryable": true
+        },
+        "retryState": "RETRY_STATE_NON_RETRYABLE_FAILURE"
+      },
+      {
+        "eventId": 8,
+        "t_s": 0.21843,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 0.220463,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 0.222305,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 0.222323,
+        "type": "WORKFLOW_EXECUTION_FAILED",
+        "failure": {
+          "message": "activity error",
+          "source": "GoSDK",
+          "cause": {
+            "message": "Physics check failed for NVR <= max_nvr, MCE < max_mce. NVR=0.107666016, MCE=4.189112, max_nvr=0, max_mce=0.001.",
+            "source": "GoSDK",
+            "type": "PhysicsCheckFailed",
+            "nonRetryable": true
+          }
+        },
+        "retryState": "RETRY_STATE_RETRY_POLICY_NOT_SET"
+      }
+    ],
+    "last_failure": {
+      "message": "activity error",
+      "source": "GoSDK",
+      "cause": {
+        "message": "Physics check failed for NVR <= max_nvr, MCE < max_mce. NVR=0.107666016, MCE=4.189112, max_nvr=0, max_mce=0.001.",
+        "source": "GoSDK",
+        "type": "PhysicsCheckFailed",
+        "nonRetryable": true
+      }
+    }
+  },
+  "f4-4": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 3.9e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002394,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.006139,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.006162,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 0.007922,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 7,
+        "t_s": 0.219323,
+        "type": "ACTIVITY_TASK_FAILED",
+        "failure": {
+          "message": "Physics check failed for NVR <= max_nvr, MCE < max_mce. NVR=0.107666016, MCE=4.189112, max_nvr=0, max_mce=0.001.",
+          "source": "GoSDK",
+          "type": "PhysicsCheckFailed",
+          "nonRetryable": true
+        },
+        "retryState": "RETRY_STATE_NON_RETRYABLE_FAILURE"
+      },
+      {
+        "eventId": 8,
+        "t_s": 0.219329,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 0.221707,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 0.223736,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 0.223755,
+        "type": "WORKFLOW_EXECUTION_FAILED",
+        "failure": {
+          "message": "activity error",
+          "source": "GoSDK",
+          "cause": {
+            "message": "Physics check failed for NVR <= max_nvr, MCE < max_mce. NVR=0.107666016, MCE=4.189112, max_nvr=0, max_mce=0.001.",
+            "source": "GoSDK",
+            "type": "PhysicsCheckFailed",
+            "nonRetryable": true
+          }
+        },
+        "retryState": "RETRY_STATE_RETRY_POLICY_NOT_SET"
+      }
+    ],
+    "last_failure": {
+      "message": "activity error",
+      "source": "GoSDK",
+      "cause": {
+        "message": "Physics check failed for NVR <= max_nvr, MCE < max_mce. NVR=0.107666016, MCE=4.189112, max_nvr=0, max_mce=0.001.",
+        "source": "GoSDK",
+        "type": "PhysicsCheckFailed",
+        "nonRetryable": true
+      }
+    }
+  },
+  "f4-5": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 4.3e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002469,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005514,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.005541,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 0.006964,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 7,
+        "t_s": 0.224831,
+        "type": "ACTIVITY_TASK_FAILED",
+        "failure": {
+          "message": "Physics check failed for NVR <= max_nvr, MCE < max_mce. NVR=0.107666016, MCE=4.189112, max_nvr=0, max_mce=0.001.",
+          "source": "GoSDK",
+          "type": "PhysicsCheckFailed",
+          "nonRetryable": true
+        },
+        "retryState": "RETRY_STATE_NON_RETRYABLE_FAILURE"
+      },
+      {
+        "eventId": 8,
+        "t_s": 0.224837,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 0.22695,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 0.22898,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 0.228998,
+        "type": "WORKFLOW_EXECUTION_FAILED",
+        "failure": {
+          "message": "activity error",
+          "source": "GoSDK",
+          "cause": {
+            "message": "Physics check failed for NVR <= max_nvr, MCE < max_mce. NVR=0.107666016, MCE=4.189112, max_nvr=0, max_mce=0.001.",
+            "source": "GoSDK",
+            "type": "PhysicsCheckFailed",
+            "nonRetryable": true
+          }
+        },
+        "retryState": "RETRY_STATE_RETRY_POLICY_NOT_SET"
+      }
+    ],
+    "last_failure": {
+      "message": "activity error",
+      "source": "GoSDK",
+      "cause": {
+        "message": "Physics check failed for NVR <= max_nvr, MCE < max_mce. NVR=0.107666016, MCE=4.189112, max_nvr=0, max_mce=0.001.",
+        "source": "GoSDK",
+        "type": "PhysicsCheckFailed",
+        "nonRetryable": true
+      }
+    }
+  },
+  "f5-1": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 4.2e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002475,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.006252,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.006278,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 0.007858,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 7,
+        "t_s": 16.059096,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 16.059102,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 16.061482,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 16.064477,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 16.064507,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 16.066822,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 16.069374,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 16.06938,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 16.070961,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 16.0732,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 16.073218,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f5-2": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 5e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.00245,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.006124,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.006153,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 0.007568,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 7,
+        "t_s": 16.257363,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 16.257368,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 16.259633,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 16.262578,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 16.262608,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 16.264455,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 16.266421,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 16.266426,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 16.268153,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 16.270515,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 16.270535,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f5-3": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 3.9e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002202,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005857,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.005882,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 0.007379,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 7,
+        "t_s": 15.915019,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 15.915024,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 15.918071,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 15.919926,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 15.919948,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 15.92145,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 15.923019,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 15.923024,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 15.924228,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 15.926153,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 15.926173,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f5-4": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 5.4e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002617,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.007451,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.007479,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 0.009017,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 7,
+        "t_s": 16.424325,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 16.424331,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 16.427016,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 16.429867,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 16.42989,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 16.431469,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 16.433518,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 16.433523,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 16.435138,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 16.437428,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 16.437446,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f5-5": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 3.6e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002813,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.00705,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.007078,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 0.009145,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 7,
+        "t_s": 16.259392,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 16.259399,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 16.262559,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 16.265235,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 16.265261,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 16.267108,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 16.269504,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 16.269508,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 16.270976,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 16.273082,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 16.2731,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f6-1": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 4e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.003224,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.007424,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.007454,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 121.014454,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 2,
+        "lastFailure": {
+          "message": "activity StartToClose timeout",
+          "source": "Server",
+          "timeoutType": "TIMEOUT_TYPE_START_TO_CLOSE"
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 136.332312,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 136.332317,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 136.335564,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 136.338338,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 136.338371,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 136.341007,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 136.343409,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 136.343413,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 136.344736,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 136.346475,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 136.346493,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f6-2": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 3.4e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002144,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.005934,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.005959,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 121.012606,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 2,
+        "lastFailure": {
+          "message": "activity StartToClose timeout",
+          "source": "Server",
+          "timeoutType": "TIMEOUT_TYPE_START_TO_CLOSE"
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 137.147974,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 137.147979,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 137.152295,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 137.155513,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 137.155544,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 137.15771,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 137.160953,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 137.160956,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 137.162398,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 137.164425,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 137.164439,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f6-3": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 3.9e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002235,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.007241,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.007268,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 121.014858,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 2,
+        "lastFailure": {
+          "message": "activity StartToClose timeout",
+          "source": "Server",
+          "timeoutType": "TIMEOUT_TYPE_START_TO_CLOSE"
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 136.66249,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 136.662495,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 136.666236,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 136.669679,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 136.669713,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 136.671924,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 136.675374,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 136.675379,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 136.676891,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 136.679163,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 136.679179,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f6-4": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 3.7e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002261,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.006435,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.006463,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 121.013584,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 2,
+        "lastFailure": {
+          "message": "activity StartToClose timeout",
+          "source": "Server",
+          "timeoutType": "TIMEOUT_TYPE_START_TO_CLOSE"
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 136.3232,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 136.323206,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 136.32682,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 136.33005,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 136.330079,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 136.331713,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 136.334697,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 136.334701,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 136.336177,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 136.338306,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 136.33832,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "f6-5": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 3.8e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002697,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.007513,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.007539,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 121.015138,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 2,
+        "lastFailure": {
+          "message": "activity StartToClose timeout",
+          "source": "Server",
+          "timeoutType": "TIMEOUT_TYPE_START_TO_CLOSE"
+        }
+      },
+      {
+        "eventId": 7,
+        "t_s": 136.413693,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 136.413698,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 136.417286,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 136.420656,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 136.420686,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 136.422881,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 136.426157,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 136.426162,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 136.427943,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 136.430103,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 136.430127,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "r2_happy_path": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 7.2e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.00462,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.010438,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.010518,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 0.012313,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 7,
+        "t_s": 0.229892,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 0.229901,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 0.232275,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 0.235001,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 0.235024,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 0.236936,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 0.238588,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 0.238591,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 0.240344,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 0.242725,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 0.242752,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "r3-repro-7-a": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 6.7e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.005807,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.012289,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.012417,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 0.014481,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 7,
+        "t_s": 0.233766,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 0.233774,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 0.235878,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 0.238457,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 0.23848,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 0.240527,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 0.242882,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 0.242886,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 0.244402,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 0.246872,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 0.246922,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "r3-repro-7-b": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 3.5e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.002314,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.006394,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.006421,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 0.008077,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 7,
+        "t_s": 0.22085,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 0.220857,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 0.222833,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 0.224984,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 0.225007,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 0.226495,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 0.227912,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 0.227916,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 0.229138,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 0.230889,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 0.230901,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  },
+  "r3_physics_gate": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 5.9e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.00317,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.008912,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.008944,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 0.010839,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 7,
+        "t_s": 0.222896,
+        "type": "ACTIVITY_TASK_FAILED",
+        "failure": {
+          "message": "Physics check failed for NVR <= max_nvr, MCE < max_mce. NVR=0.107666016, MCE=4.189112, max_nvr=0, max_mce=0.001.",
+          "source": "GoSDK",
+          "type": "PhysicsCheckFailed",
+          "nonRetryable": true
+        },
+        "retryState": "RETRY_STATE_NON_RETRYABLE_FAILURE"
+      },
+      {
+        "eventId": 8,
+        "t_s": 0.222905,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 0.224869,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 0.228444,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 0.228542,
+        "type": "WORKFLOW_EXECUTION_FAILED",
+        "failure": {
+          "message": "activity error",
+          "source": "GoSDK",
+          "cause": {
+            "message": "Physics check failed for NVR <= max_nvr, MCE < max_mce. NVR=0.107666016, MCE=4.189112, max_nvr=0, max_mce=0.001.",
+            "source": "GoSDK",
+            "type": "PhysicsCheckFailed",
+            "nonRetryable": true
+          }
+        },
+        "retryState": "RETRY_STATE_RETRY_POLICY_NOT_SET"
+      }
+    ],
+    "last_failure": {
+      "message": "activity error",
+      "source": "GoSDK",
+      "cause": {
+        "message": "Physics check failed for NVR <= max_nvr, MCE < max_mce. NVR=0.107666016, MCE=4.189112, max_nvr=0, max_mce=0.001.",
+        "source": "GoSDK",
+        "type": "PhysicsCheckFailed",
+        "nonRetryable": true
+      }
+    }
+  },
+  "r6-calibration-1": {
+    "events": [
+      {
+        "eventId": 1,
+        "t_s": 0.0,
+        "type": "WORKFLOW_EXECUTION_STARTED"
+      },
+      {
+        "eventId": 2,
+        "t_s": 4.6e-05,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 3,
+        "t_s": 0.004176,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 4,
+        "t_s": 0.010337,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 5,
+        "t_s": 0.010427,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Infer",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "10s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 6,
+        "t_s": 0.013265,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 7,
+        "t_s": 16.713562,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 8,
+        "t_s": 16.713571,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 9,
+        "t_s": 16.71559,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 10,
+        "t_s": 16.717785,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 11,
+        "t_s": 16.717811,
+        "type": "ACTIVITY_TASK_SCHEDULED",
+        "activity": "Report",
+        "startToCloseTimeout": "120s",
+        "heartbeatTimeout": "0s",
+        "scheduleToCloseTimeout": "0s",
+        "retryPolicy": {
+          "initialInterval": "1s",
+          "backoffCoefficient": 2,
+          "maximumInterval": "100s",
+          "maximumAttempts": 3
+        }
+      },
+      {
+        "eventId": 12,
+        "t_s": 16.719295,
+        "type": "ACTIVITY_TASK_STARTED",
+        "attempt": 1
+      },
+      {
+        "eventId": 13,
+        "t_s": 16.720741,
+        "type": "ACTIVITY_TASK_COMPLETED"
+      },
+      {
+        "eventId": 14,
+        "t_s": 16.720744,
+        "type": "WORKFLOW_TASK_SCHEDULED"
+      },
+      {
+        "eventId": 15,
+        "t_s": 16.722116,
+        "type": "WORKFLOW_TASK_STARTED"
+      },
+      {
+        "eventId": 16,
+        "t_s": 16.72373,
+        "type": "WORKFLOW_TASK_COMPLETED"
+      },
+      {
+        "eventId": 17,
+        "t_s": 16.723759,
+        "type": "WORKFLOW_EXECUTION_COMPLETED"
+      }
+    ],
+    "last_failure": null
+  }
+}
